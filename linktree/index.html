@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="stylesheet" href="./css/dycalendar.css">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+ <script src="https://kit.fontawesome.com/2d3dc5d61d.js" crossorigin="anonymous"></script>
+        <title>Glassmorphism</title>
+
+
+    </head>
+
+<body>
+
+
+<div class="cover">
+    <center>
+        <h3 style="color: #000;opacity: 50%;">Made by Mohamed Amin tlili</h3>
+    </center>
+
+
+        <section class="glass">
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <a href="https://aminet5.github.io/Portfolio/" target="_blank">
+                            <img src="por.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                        </a>
+                        <h2>01</h2>
+                        <h3>Mon portfolio</h3>
+                        <a href="https://aminet5.github.io/Portfolio/">Acceder</a>
+                    </div>
+                </div> 
+                <div class="card">
+                    <div class="content">
+                        <a href="https://www.linkedin.com/in/mohamed-amin-tlili-784574326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                            <img src="lin.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                        </a>
+                        
+                        <h2>02</h2>
+                        <h3>Mon Linkedin </h3>
+                      
+                        <a href="https://www.linkedin.com/in/mohamed-amin-tlili-784574326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Acceder</a>
+                    </div>
+                </div>    
+                <div class="card">
+                    <div class="content">
+                        <a href="#" id="acceder-btn" target="_blank">
+                            <img src="connt.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+                        </a>
+                        <h2>03</h2>
+                        <h3>Me contacter</h3>
+                      
+                    </div>
+                </div>
+                
+                <!-- Modal Popup -->
+                <div id="modal" class="modal">
+                    <div class="card modal-content">
+                        <span class="close-btn" id="close-btn">&times;</span>
+                        <p>Phone Number: +216-26934560</p>
+                    </div>
+                </div>
+                
+        </section>
+
+
+
+      
+ 
+<script src="./dycalendar.js"></script>
+<script>
+    document.getElementById('acceder-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    document.getElementById('modal').style.display = 'block'; // Show the modal
+});
+
+document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none'; // Hide the modal
+});
+
+// Close the modal when clicking anywhere outside of it
+window.onclick = function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+};
+    dycalendar.draw({
+        target:'#dycalendar',
+        type:'month',
+        dayformat:'full',
+        monthformat:'full',
+        highlighttargetdate:true,
+        prevnextbutton:'show',
+    })
+</script>
+
+
+    <script type="text/javascript" src="vanilla-tilt.js">
+    </script>
+
+    </div>
+</body>
+
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+        glare:true,
+        "max-glare":0.2,
+	});
+    </script>
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".holder"), {
+		max: 10,
+		speed: 50,
+        scale:1.1,
+        easing:"cubic-bezier(.03,.98,.52,.99)",
+        perspective:  10000,
+        glare:true,
+        "max-glare":0.2, 
+        gyroscope: true,  
+    gyroscopeMinAngleX: -45,    
+    gyroscopeMaxAngleX:  45,  
+    gyroscopeMinAngleY: -45,   
+    gyroscopeMaxAngleY:  45,
+
+	});
+	
+    </script>
+
+<script>
+    VanillaTilt.init(document.querySelectorAll("span"), {
+    max: 25,
+    speed: 100,
+    glare:true,
+    "max-glare":0.5,
+    perspective:1000,
+});
+</script>
+</html>
+
